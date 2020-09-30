@@ -1,0 +1,647 @@
+
+
+html {
+  height: 100%;
+}
+
+body {
+  overflow: hidden;
+  background: #ffffff ;
+  background-size: cover;
+  position: fixed;
+  padding: 0px;
+  margin: 0px;
+  width: 100%;
+  height: 100%;
+  font: normal 14px/1.618em "YuMincho","SF Pro JP", "SF Pro Display", "SF Pro Icons", "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", メイリオ, Meiryo, "ＭＳ Ｐゴシック", "Helvetica Neue", Helvetica, Arial, sans-serif;;
+  
+}
+
+
+
+.btn{
+  overflow: hidden;
+  animation: fadeIn 0.5s 0.2s cubic-bezier(0.55, 0.055, 0.675, 0.19) forwards;
+  height:70px;
+  width: 200px;
+  top: 50%;
+  left: 50%;
+  
+  opacity: 0;
+  cursor: pointer;
+  z-index: 1;
+  transition: all .25s ease;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  border-radius: 5px;
+ 
+}
+.btn:hover{
+	top: 50%;
+    left: 50%;
+	transform: translate(-50%, -50%) scale(1.07);
+   
+	box-shadow: 0 7px 15px rgba(0, 0, 0, 0.2);
+	
+
+	
+}
+
+.title::after{
+ text-align: center;  
+ content:"濱道光希の魅力";
+color:#ffffff;
+	
+ 
+}
+.nav{
+	display: flex;
+ 	 justify-content: center;
+ 	 align-items: center;
+	box-shadow: 0 5px 12px rgba(0, 0, 0, 0.2);
+	border-radius: 3px;
+	background-color: #2B5F75;
+	overflow:hidden;
+	top:0;
+	width:100%;
+	height:70px;
+	z-index: 2;
+	
+}
+
+.thumbnail{
+	 display: flex;
+ 	 justify-content: center;
+ 	 align-items: center;
+}
+
+
+.background1 > .thumbnail.active > .caption.active::after{
+  
+  text-align: center;
+  color: #fff;
+  font-size: 2em;
+	content:"能動力";
+}
+.background2 > .thumbnail.active > .caption.active::after{
+	text-align: center;
+  	color: #fff;
+  	font-size: 2em;
+	content:"継続力";
+}
+.background3 > .thumbnail.active > .caption.active::after{
+	text-align: center;
+  color: #fff;
+  font-size: 2em;
+	content:"共感力";
+}
+.background4 > .thumbnail.active > .caption.active::after{
+	text-align: center;
+  color: #fff;
+  font-size: 2em;
+	content:"分析力";
+}
+
+
+.background1 > .thumbnail.active{
+	background-color:#CB4042;
+	width:100%;
+	height:100%;
+	
+	
+       
+}
+.background2 > .thumbnail.active{
+	background-color:#82663A;
+	width:100%;
+	height:100%;
+	
+	
+       
+}
+.background3 > .thumbnail.active{
+	background-color:#B5CAA0;
+	width:100%;
+	height:100%;
+	
+	
+       
+}
+.background4 > .thumbnail.active{
+	background-color:#7B90D2;
+	width:100%;
+	height:100%;
+	
+	
+       
+}
+.background1 > .ripple{
+	background-color: #CB4042;
+}
+.background2 > .ripple{
+	background-color: #82663A;
+}
+.background3 > .ripple{
+	background-color: #B5CAA0;
+}
+.background4 > .ripple{
+	background-color: #7B90D2;
+}
+
+.display-none{
+	display:none;
+}
+.contents{
+	position:relative;
+	opacity : 0;
+	top:20%;
+	overflow-y: scroll;
+    height: calc(100% + 30px);
+	animation:fadeInUp 0.5s 1.0s ease-in-out forwards;
+}
+.occupation > .thumbnail.active{
+	transition: all .25s 0.7s ease;
+	height:10%;
+	
+}
+.seiyaku{
+	pointer-events:none;
+}
+
+.background {
+ 
+}
+
+.background.active:hover{
+  transform: scale(1.04);
+
+ box-shadow: 0 7px 15px rgba(0, 0, 0, 0.2);
+}
+
+.background.active{
+
+  overflow: hidden;
+  height: 35%;
+  width: 47%;
+  border-radius: 3px;
+  transition: all .25s ease;
+  animation: populate .45s 0.6s ease-out normal backwards;
+  cursor: pointer;
+  z-index: 2;
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.2);
+}
+
+ .background1 {
+ margin:.5em;
+  position:absolute;
+  z-index:2;
+  background: #ffffff;
+ 
+}
+
+ .background2 {
+	  margin:.5em;
+	left:50%;
+	position:absolute;
+	z-index:2;
+  
+  	background: #ffffff;
+}
+
+
+.background3 {
+	margin:.5em;
+	top: calc(50% + 2em);
+	position:absolute;
+	z-index:2;
+	
+  	background: #ffffff;
+  
+}
+
+.background4 { 
+	margin:.5em;
+	top: calc(50% + 2em);
+	left:50%;
+	
+
+	position:absolute;
+	z-index:2;
+	
+  	background: #ffffff;
+
+}
+.occupation{
+	position:absolute;
+	
+	z-index:7;
+	margin: .5em;
+  	height: 35%;
+ 	width: 47%;
+ 	border-radius: 3px;
+	box-shadow: 0 5px 12px rgba(0, 0, 0, 0.2);
+	
+}
+.background1.occupation {
+	
+	 transform: scale(1.04);
+	box-shadow: 0 7px 15px rgba(0, 0, 0, 0.2);
+	animation: moveCenter1 0.5s 0.2s cubic-bezier(0.86, 0, 0.07, 1) forwards,occu 0.4s 0.6s cubic-bezier(0.86, 0, 0.07, 1) forwards ;
+}
+.background2.occupation {
+
+	 transform: scale(1.04);
+	box-shadow: 0 7px 15px rgba(0, 0, 0, 0.2);
+	animation: moveCenter2 0.5s 0.2s cubic-bezier(0.86, 0, 0.07, 1) forwards,occu 0.4s 0.6s cubic-bezier(0.86, 0, 0.07, 1) forwards ;
+}
+.background3.occupation {
+
+	 transform: scale(1.04);
+	box-shadow: 0 7px 15px rgba(0, 0, 0, 0.2);
+	animation: moveCenter3 0.5s 0.2s cubic-bezier(0.86, 0, 0.07, 1) forwards,occu 0.4s 0.6s cubic-bezier(0.86, 0, 0.07, 1) forwards ;
+}
+.background4.occupation {
+
+	 transform: scale(1.04);
+	box-shadow: 0 7px 15px rgba(0, 0, 0, 0.2);
+	animation: moveCenter4 0.5s 0.2s cubic-bezier(0.86, 0, 0.07, 1) forwards,occu 0.4s 0.6s cubic-bezier(0.86, 0, 0.07, 1) forwards ;
+}
+
+.expand{
+	
+	height:70px;
+  	width: 200px;
+  	top: 50%;
+  	left: 50%;
+  	cursor: pointer;
+  	z-index: 1;
+  	box-shadow: 0 5px 12px rgba(0, 0, 0, 0.2);
+  	position: absolute;
+  	transform: translate(-50%, -50%);
+  	background-color: #e0e0e0;
+  	border-radius: 4px;
+	animation: materia 0.5s 0.3s cubic-bezier(0.86, 0, 0.07, 1) forwards;
+}
+
+.close.active {
+	position:fixed;
+	top:85%;
+	left:75%;
+	z-index: 9;
+	background-color: #2B5F75;
+	font-size: 40px;
+	transition: all .25s ease;
+	width: 1.4em;
+	height: 1.4em;
+	border: 0.1em solid #2B5F75;
+	border-radius: 100%;
+	box-shadow: 0 2px 2px 0 rgba(0,0,0,.12), 0 2px 2px 0 rgba(0,0,0,.24);
+}
+/* 左 */
+.close.active::before {
+	position: absolute;
+	top: 0.2em;
+	left: 0.6em;
+	width: 0.2em;
+	height: 1em;
+	content: "";
+	background-color: #ffffff;
+	transform: rotate(45deg);
+}
+/* 右 */
+.close.active::after {
+	position: absolute;
+	top: 0.6em;
+	left: 0.2em;
+	width: 1em;
+	height: 0.2em;
+	content: "";
+	background-color: #ffffff;
+	transform: rotate(225deg);
+}
+.close.active:hover{
+	box-shadow: 0 4px 5px 0 rgba(0,0,0,.14), 0 1px 10px 0 rgba(0,0,0,.12), 0 2px 4px -1px rgba(0,0,0,.2);
+	transform:scale(1.04);
+}
+
+
+
+.pulse {
+  overflow: visible;
+  position: absolute; 
+  background-color:#2B5F75;
+	
+}
+
+.pulse::before {
+ 
+  content: '';
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: inherit;
+  border-radius: inherit;
+  transition: opacity .3s, transform .3s;
+  animation: pulse-animation 1s cubic-bezier(0.25, 0, 0.38, 1) infinite ;
+  z-index: -1;
+}
+
+.ripple {
+ 
+    width: 150px;
+    height: 150px;
+	overflow: hidden;
+    
+    position: absolute;
+    border-radius: 100%;
+    pointer-events: none;
+    transform: scale(0);
+    opacity: 0;
+	background-size:contain;
+}
+
+.ripple.show {
+	
+    animation: ripple 0.8s ease-out;
+}
+@keyframes fadeInUp { 
+
+  0% {
+	 opacity: 0;
+	top:20%;
+	} 
+
+  100% {
+	  top:0%;
+	  opacity: 1;
+	  
+	
+	} 
+}
+@keyframes fadeIn { 
+
+  0% {opacity: 0} 
+
+  100% {
+	  opacity: 1;
+	   box-shadow: 0 5px 12px rgba(0, 0, 0, 0.2);
+	
+	} 
+}
+
+
+@keyframes populate {
+  0% {
+    transform: scale(0);
+  }
+}
+
+@keyframes moveCenter1{
+	0%{
+	top:4.2em;
+	left:0%;
+	}
+	100%{
+	top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+	
+	}
+}
+@keyframes moveCenter2{
+	0%{
+	top: 4.2em;
+    left: 50%;
+	}
+	100%{
+	top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+	
+	}
+}
+@keyframes moveCenter3{
+	0%{
+	top: calc(50% + 2em);
+    left: 0%;
+	}
+	100%{
+	top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+	
+	}
+}
+@keyframes moveCenter4{
+	0%{
+	top: calc(50% + 2em);
+    left: 50%;
+	}
+	100%{
+	top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+	
+	}
+}
+
+
+
+
+
+@keyframes ripple {
+    from {
+        opacity: 1;
+    }
+    to {
+        transform: scale(10);
+        opacity: 0;
+    }
+}
+
+
+@keyframes borderRadius {
+  0% {
+    border-radius: 50%;
+  }
+  100% {
+    border-radius: 0px;
+  }
+}
+
+
+
+@keyframes moveDown {
+  0% {
+    top: 50%;
+  }
+  50% {
+    top: 40%;
+  }
+  100% {
+    top: 100%;
+  }
+}
+
+
+@keyframes moveUp {
+  0% {
+    background: #FFB300;
+    top: 100%;
+  }
+  50% {
+    top: 40%;
+  }
+  100% {
+    top: 50%;
+    background: #E0E0E0;
+  }
+}
+
+
+@keyframes moveIn {
+  0% {
+    margin-top: 50px;
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    margin-top: -20px;
+  }
+}
+
+
+
+@keyframes scaleIn {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+
+@keyframes pulse-animation {
+  0% {
+	
+    opacity: 1;
+	transform: scale(1);
+  }
+  50% {
+   opacity:1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.5);
+  }
+}
+
+
+  
+  @keyframes materia {
+    0% {
+    width: 200px;
+      height: 70px;
+    }
+	  
+    50% {
+      border-radius: 4px;
+    }
+	  
+    100% {
+      width: 100%;
+      height: 100%;
+      background: #ffffff;
+      border-radius: 4px;
+    }
+ } 
+	@keyframes occu {
+    0% {
+		
+    }
+	  
+    100% {
+      width: 100%;
+      height: 100%;
+	  margin:0;
+	  
+    }
+ }
+
+
+
+.midashi{
+	margin-top: 0.2em;
+    padding-bottom: 0.3em;
+	font-size: 44px;
+}
+p.center-picture{
+	text-align: center;
+}
+p{
+
+	margin-top: 1.4em;
+	display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+.souzenpi-picture{
+	width:300px;
+	height:900px;
+	text-align: center;
+
+}
+.contents{
+	font-family: "SF Pro JP", "SF Pro Display", "SF Pro Icons", "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", メイリオ, Meiryo, "ＭＳ Ｐゴシック", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	padding-top: 35px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 87.5%;
+	max-width:750px;
+    line-height: 1.47059;
+    font-size: 17px;
+    font-weight: 400;
+}
+.shodo-picture{
+	width:675px;
+	height:500px;
+		
+}
+@media only screen and (max-width: 1068px){
+	.midashi{
+		font-size: 35px;
+	}
+	.contents{
+		
+	    padding-top: 35px;
+		max-width: 414px;
+		margin-left: auto;
+  		margin-right: auto;
+  	    width: 87.5%;
+		line-height: 1.47059;
+		font-size: 17px;
+		font-weight: 400;
+		
+	}
+	.shodo-picture{
+     width: 100%;
+     height:auto;
+     text-align:center;
+	display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+   
+	}
+	
+
+
+}
+
